@@ -1,0 +1,47 @@
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ./   # dataset root dir
+train: 
+  - datasets/paragraph_det/train_416_seg/cvbook_maphand/images/train   #新增的易错场景数据（底部，英文题目和段落贴近，古诗...）
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/images/train 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/zh_maphand1-filt/images/train
+
+  # - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/crop_augment/images/train 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/zh_maphand1-filt/crop_augment/images/train 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传1/images/train
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传2/images/train
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传3/images/train
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传4/images/train
+  - datasets/paragraph_det/train_416_seg/layout_mainarea_1w_0729/images/train
+  - datasets/paragraph_det/train_416_seg/en_part2_part0_maphand/images/train
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传1/crop_augment/images/train
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传2/crop_augment/images/train
+  - datasets/paragraph_det/train_416_seg/layout_mainarea_1w_0729/crop_augment/images/train
+  - datasets/paragraph_det/train_416_seg/en_part2_part0_maphand/crop_augment/images/train
+                           
+val: 
+  # - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/images/val 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/zh_maphand1-filt/images/val 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传1/crop_augment/images/val
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传2/crop_augment/images/val
+  - datasets/paragraph_det/train_416_seg/layout_mainarea_1w_0729/crop_augment/images/val
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传1/images/val
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求原数据回传2/images/val
+  # - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传3/images/val #里面有很多未dewarp的图
+  - datasets/paragraph_det/train_416_seg/layout_mainarea_1w_0729/images/val
+  # - datasets/paragraph_det/train_data_640/cvbook_hotmap_reverse/en_part2/yoloseg-0.1/images/val
+  # - datasets/paragraph_det/train_data_640/cvbook_hotmap_reverse/zh/yoloseg-0.2/images/val
+# test: test_split_1024/images  # test images (optional)
+
+# Classes
+nc: 9  # number of classes
+names: ["unknown", "title", "list", "figure", "table",
+        "text", "poetry", "dialogue", "word"]  # class names
+# nc: 8  # number of classes
+# names: ["unknown", "title", "list", "figure", "table",
+#         "text", "poetry", "dialogue"]  # class names
+
+
+# Download script/URL (optional)
+# download: https://ultralytics.com/assets/coco128.zip

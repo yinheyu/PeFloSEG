@@ -1,0 +1,25 @@
+
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: ./   # dataset root dir
+train: 
+  # - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/images/train 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/subseg/images/train 
+  - datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/zh_maphand1-filt/subseg/images/train 
+
+                           
+val: 
+- datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/pad_sh_jdf_part12merge_maphand1-filt/subseg/images/val
+- datasets/paragraph_det/train_416_seg/1129段落检测标注需求数据回传5/zh_maphand1-filt/subseg/images/val
+
+# Classes
+nc: 9  # number of classes
+names: ["unknown", "title", "list", "figure", "table",
+        "text", "poetry", "dialogue", "word"]  # class names
+# nc: 8  # number of classes
+# names: ["unknown", "title", "list", "figure", "table",
+#         "text", "poetry", "dialogue"]  # class names
+
+
+# Download script/URL (optional)
+# download: https://ultralytics.com/assets/coco128.zip
